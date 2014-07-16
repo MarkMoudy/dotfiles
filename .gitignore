@@ -13,5 +13,6 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-# ignore the extras file
-.extras
+# ignore the potentially dangerous files
+.extra
+.path
