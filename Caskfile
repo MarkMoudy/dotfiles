@@ -1,0 +1,26 @@
+# Install native apps
+# Usage: `brew bundle Caskfile`
+
+install caskroom/cask/brew-cask
+tap caskroom/versions
+
+# Sanity tools
+cask install alfred 2> /dev/null
+cask alfred link
+cask install bartender 2> /dev/null
+
+#storage and cloudtools
+cask install evernote 2> /dev/null
+cask install google-drive 2> /dev/null
+
+#System Tools
+cask install appcleaner 2> /dev/null
+cask install iterm2 2> /dev/null
+cask install the-unarchiver 2> /dev/null
+
+# Dev Tools
+cask install imagealpha 2> /dev/null
+cask install imageoptim 2> /dev/null
+cask install sublime-text 2> /dev/null
+cask install virtualbox 2> /dev/null
+cask install vlc 2> /dev/null

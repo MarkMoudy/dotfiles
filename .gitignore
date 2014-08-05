@@ -16,3 +16,4 @@ Thumbs.db
 # ignore the potentially dangerous files
 .extra
 .path
+.path-proxy
