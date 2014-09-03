@@ -1,0 +1,11 @@
+[core]
+	editor = subl -n -w
+	autocrlf = input
+[mergetool]
+	keepBackup = true
+[help]
+	autocorrect = 1
+[branch]
+	autosetuprebase = always
+[push]
+	default = simple
