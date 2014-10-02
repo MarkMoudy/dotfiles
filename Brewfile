@@ -31,8 +31,11 @@ install homebrew/dupes/screen
 
 # Install other useful binaries
 install ack
+
 	##BFG Repo-Cleaner - Removes large or troublesome blobs like git-filter-branch does, but faster. http://rtyley.github.io/bfg-repo-cleaner/ 
 install bfg
+	##Cowsay - generates ASCII pictures of a cow with a message
+install cowsay
 install git
 	##HashPump - A tool to exploit the hash length extension attack in various hashing algorithms. https://github.com/bwall/HashPump
 install hashpump
