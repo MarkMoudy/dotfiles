@@ -40,7 +40,6 @@ install git
 	##HashPump - A tool to exploit the hash length extension attack in various hashing algorithms. https://github.com/bwall/HashPump
 install hashpump
 install nmap
-install node # This installs `npm` too using the recommended installation method
 install pv ##Pipe Viewer - is a terminal-based tool for monitoring the progress of data through a pipeline. http://www.ivarch.com/programs/pv.shtml
 install rename
 install tree
@@ -48,5 +47,6 @@ install tree
 install ucspi-tcp # `tcpserver` et al.
 install webkit2png ##webkit2png is a command line tool that creates screenshots of webpages. http://www.paulhammond.org/webkit2png/
 
+install nvm 
 # Remove outdated versions from the cellar
 cleanup

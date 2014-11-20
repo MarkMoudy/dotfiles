@@ -15,3 +15,7 @@ The Caskfile contains some native apps that can be installed with `brew cask:`
 ```Bash
 brew bundle ~/Caskfile
 ```
+
+TODO:  find a new system as this one isn't working well and need to add node packages through npm to the system. check out: 
+*https://github.com/necolas/dotfiles
+*https://github.com/alrra/dotfiles
