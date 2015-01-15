@@ -37,6 +37,8 @@ install bfg
 	##Cowsay - generates ASCII pictures of a cow with a message
 install cowsay
 install git
+  ## Generic Log Colorizer
+install grc 
 	##HashPump - A tool to exploit the hash length extension attack in various hashing algorithms. https://github.com/bwall/HashPump
 install hashpump
 install nmap
