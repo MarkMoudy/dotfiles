@@ -1,4 +1,4 @@
 #!/bin/bash
 
-nvm install v0.10.33
+nvm install v0.12.0
 npm install -g bower
