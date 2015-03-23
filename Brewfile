@@ -31,6 +31,7 @@ install homebrew/dupes/screen
 
 # Install other useful binaries
 install ack
+install git-flow
 
 	##BFG Repo-Cleaner - Removes large or troublesome blobs like git-filter-branch does, but faster. http://rtyley.github.io/bfg-repo-cleaner/ 
 install bfg
