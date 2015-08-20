@@ -24,3 +24,5 @@ cask install imageoptim 2> /dev/null
 cask install sublime-text 2> /dev/null
 cask install virtualbox 2> /dev/null
 cask install vlc 2> /dev/null
+
+cask install androidtool 2> /dev/null
