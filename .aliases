@@ -45,6 +45,11 @@ alias localip="ipconfig getifaddr en0"
 alias getlocalip="ipconfig getifaddr"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
+# ports
+alias getPorts="lsof -i -P"
+alias getPortsOpen="lsof -i -P | grep -i 'listen'"
+alias getPortsSimple="netstat -atp tcp"
+
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
