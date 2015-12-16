@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
 # export PATH="$HOME/bin:$PATH";
+export PS1="\[\033[0;33m\]\u\[\033[0m\]\[\033[0;34m\]@\h\[\033[0m\]:\[\033[0;32m\]\W \$ \[\033[0m\]"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
