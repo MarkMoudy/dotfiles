@@ -1,21 +1,18 @@
-### My Dotfiles
+# My Dotfiles
 This is a repo of my dotfiles to set up a new osx machine.  Heavily influenced and structured based on [mathiasbynes/dotfiles](https://github.com/mathiasbynens/dotfiles).
 
-#### Usage
-navigate to dotfiles directory and execute `source bootstrap.sh`
+## Usage
+clone this repo and navigate to dotfiles directory and execute `source bootstrap.sh`.  
 
-#### Install Homebrew Formulas
+### Install Homebrew and Cask Formulas
 Execute the Brewfile on a new machine to install a bunch of useful homebrew formulas. 
 ```Bash
-brew bundle ~/Brewfile
-```
+bash ~/Brewfile
+```  
 
-#### Install Native Apps with `Brew Cask`
-The Caskfile contains some native apps that can be installed with `brew cask:`
+After running the brew file you will need to update your shell to use the updated bash version instead of the system default bash. You will see complaints about `bash-completion` arguments if you have not done this.  
 ```Bash
-brew bundle ~/Caskfile
+$ sudo vi /etc/shells
+// add `/usr/local/bin/bash` to the list of shells
+$ chsh -s /usr/local/bin/bash
 ```
-
-TODO:  find a new system as this one isn't working well and need to add node packages through npm to the system. check out: 
-*https://github.com/necolas/dotfiles
-*https://github.com/alrra/dotfiles
