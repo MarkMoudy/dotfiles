@@ -24,19 +24,22 @@ brew cask install google-drive 2> /dev/null
 
 #System Tools
 brew cask install appcleaner 2> /dev/null
+brew cask install day-o 2> /dev/null
 brew cask install iterm2 2> /dev/null
-brew cask install the-unarchiver 2> /dev/null
 brew cask install little-snitch 2> /dev/null
 brew cask install micro-snitch 2> /dev/null
+brew cask install the-unarchiver 2> /dev/null
 
 # Dev Tools
+brew cask install androidtool 2> /dev/null
 brew cask install imagealpha 2> /dev/null
 brew cask install imageoptim 2> /dev/null
+brew cask install numi 2> /dev/null
 brew cask install sublime-text3 2> /dev/null
 brew cask install vagrant 2> /dev/null
 brew cask install virtualbox 2> /dev/null
 brew cask install vlc 2> /dev/null
-brew cask install androidtool 2> /dev/null
+
 
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
