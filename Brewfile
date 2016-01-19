@@ -47,6 +47,7 @@ brew cask install androidtool 2> /dev/null
 brew cask install imagealpha 2> /dev/null
 brew cask install imageoptim 2> /dev/null
 brew cask install numi 2> /dev/null
+brew cask install slack 2> /dev/null
 brew cask install sublime-text3 2> /dev/null
 brew cask install vagrant 2> /dev/null
 brew cask install virtualbox 2> /dev/null
@@ -91,11 +92,13 @@ brew install zopfli
 ##Pipe Viewer - is a terminal-based tool for monitoring the progress of data through a pipeline. http://www.ivarch.com/programs/pv.shtml
 brew install pv 
 
-# Install Language support
+# Install Development languages and tools
+brew install docker
+brew install docker-machine
+brew install go
+brew install nvm
 brew install python --framework
 brew linkapps python
-brew install nvm
-brew install go
 
 # Remove outdated versions from the cellar
 brew cleanup
