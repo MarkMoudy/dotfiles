@@ -35,6 +35,7 @@ brew cask install appcleaner 2> /dev/null
 brew cask install bettertouchtool 2> /dev/null
 brew cask install day-o 2> /dev/null
 brew cask install iterm2 2> /dev/null
+brew cask install liteicon 2> /dev/null
 brew cask install little-snitch 2> /dev/null
 brew cask install micro-snitch 2> /dev/null
 brew cask install sizeup 2> /dev/null
