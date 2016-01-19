@@ -26,6 +26,8 @@ brew cask install google-drive 2> /dev/null
 brew cask install appcleaner 2> /dev/null
 brew cask install iterm2 2> /dev/null
 brew cask install the-unarchiver 2> /dev/null
+brew cask install little-snitch 2> /dev/null
+brew cask install micro-snitch 2> /dev/null
 
 # Dev Tools
 brew cask install imagealpha 2> /dev/null
