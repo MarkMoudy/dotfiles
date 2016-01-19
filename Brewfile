@@ -75,35 +75,21 @@ brew install homebrew/dupes/screen
 
 # Install other useful binaries
 brew install ack
-brew install git-flow
-brew install httpie
-
-## BFG Repo-Cleaner - Removes large or troublesome blobs like git-filter-branch does, but faster. http://rtyley.github.io/bfg-repo-cleaner/ 
-brew install bfg
-
 brew install cowsay
 brew install git
-
-## Generic Log Colorizer
-brew install grc
-
-##HashPump - A tool to exploit the hash length extension attack in various hashing algorithms. https://github.com/bwall/HashPump
-#brew install hashpump
-
+brew install git-flow
+brew install grc ## Generic Log Colorizer
+brew install httpie
 brew install nmap
-
-##Pipe Viewer - is a terminal-based tool for monitoring the progress of data through a pipeline. http://www.ivarch.com/programs/pv.shtml
-#brew install pv 
-
+brew install pigz
 brew install rename
 brew install tree
+brew install zopfli
 
-## `tcpserver` et al. tcpserver and tcpclient are easy-to-use command-line tools for building TCP client-server applications. http://cr.yp.to/ucspi-tcp.html
-#brew install ucspi-tcp
+##Pipe Viewer - is a terminal-based tool for monitoring the progress of data through a pipeline. http://www.ivarch.com/programs/pv.shtml
+brew install pv 
 
-##webkit2png is a command line tool that creates screenshots of webpages. http://www.paulhammond.org/webkit2png/
-#brew install webkit2png 
-
+# Install Language support
 brew install python --framework
 brew linkapps python
 brew install nvm
