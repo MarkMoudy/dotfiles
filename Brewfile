@@ -14,6 +14,7 @@ brew upgrade --all
 
 brew tap caskroom/cask
 brew tap caskroom/versions
+brew tap homebrew/versions
 
 brew install brew-cask
 
