@@ -26,9 +26,12 @@ brew cask install xquartz
 brew cask install alfred 2> /dev/null
 brew cask install bartender 2> /dev/null
 
-#storage and cloudtools
+#storage and tools
 brew cask install evernote 2> /dev/null
 brew cask install google-drive 2> /dev/null
+brew cask install firefox
+brew cask install adobe-reader
+brew cask install doxie
 
 #System Tools
 brew cask install appcleaner 2> /dev/null
@@ -75,6 +78,8 @@ brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
+brew install openssl
+brew link --force openssl
 
 # Install other useful binaries
 brew install ack
