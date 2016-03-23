@@ -31,13 +31,14 @@ brew cask install evernote 2> /dev/null
 brew cask install google-drive 2> /dev/null
 brew cask install firefox
 brew cask install adobe-reader
-brew cask install doxie
+#brew cask install doxie
 
 #System Tools
 brew cask install appcleaner 2> /dev/null
 brew cask install bettertouchtool 2> /dev/null
 brew cask install day-o 2> /dev/null
 brew cask install iterm2 2> /dev/null
+brew cask install keepassx 2> /dev/null
 brew cask install liteicon 2> /dev/null
 brew cask install little-snitch 2> /dev/null
 brew cask install micro-snitch 2> /dev/null
@@ -46,12 +47,14 @@ brew cask install spectacle 2> /dev/null
 brew cask install the-unarchiver 2> /dev/null
 
 # Dev Tools
-brew cask install androidtool 2> /dev/null
+#brew cask install androidtool 2> /dev/null
 brew cask install imagealpha 2> /dev/null
 brew cask install imageoptim 2> /dev/null
 brew cask install numi 2> /dev/null
+brew cask install screenhero 2> /dev/null
 brew cask install slack 2> /dev/null
 brew cask install sublime-text3 2> /dev/null
+brew cask install toggldesktop 2> /dev/null
 brew cask install vagrant 2> /dev/null
 brew cask install virtualbox 2> /dev/null
 brew cask install vlc 2> /dev/null
@@ -98,8 +101,8 @@ brew install zopfli
 brew install pv 
 
 # Install Development languages and tools
-brew install docker
-brew install docker-machine
+brew install docker 2> /dev/null
+brew install docker-machine 2> /dev/null
 brew install go
 brew install nvm
 brew install python --framework
