@@ -14,7 +14,15 @@ done;
 unset file;
 
 #setup nodejs NVM tool 
-source $(brew --prefix nvm)/nvm.sh
+# source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="/Users/mmoudy001c/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export HOMEBREW_NO_ANALYTICS=1
+
+# Ignore lines matching the previous history entry. Prevents up arrow through
+# a bunch of ls commands, etc.
+export HISTCONTROL=ignoredups
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
@@ -24,6 +32,10 @@ shopt -s histappend;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
+# Auto expand directory names with results of word expansion when performing
+# filename completion
+shopt -s direxpand
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
@@ -46,7 +58,7 @@ if [ -f $(brew --prefix grc)/etc/grc.bashrc ]; then
 fi
 
 # Start up ssh-agent
-SSH_ENV="$HOME/.ssh/environment"
+export SSH_ENV="$HOME/.ssh/environment"
 
 function start_agent {
      echo "Initialising new SSH agent..."
@@ -61,7 +73,7 @@ function start_agent {
 
 if [ -f "${SSH_ENV}" ]; then
      . "${SSH_ENV}" > /dev/null
-     #ps ${SSH_AGENT_PID} doesn't work under cywgin
+     ps ${SSH_AGENT_PID} # doesn't work under cywgin
      ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
          start_agent;
      }
@@ -69,3 +81,10 @@ else
      start_agent;
 fi
 
+## Cleanup ssh-agents on exit
+function cleanup {
+    echo \"Killing SSH-Agent\"
+    kill -9 $SSH_AGENT_PID
+}
+# trap cleanup EXIT
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

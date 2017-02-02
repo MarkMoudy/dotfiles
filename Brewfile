@@ -36,7 +36,9 @@ brew cask install adobe-reader
 #System Tools
 brew cask install appcleaner 2> /dev/null
 brew cask install bettertouchtool 2> /dev/null
+brew cask install cheatsheet 2> /dev/null
 brew cask install day-o 2> /dev/null
+brew cask install istat-menus 2> /dev/null
 brew cask install iterm2 2> /dev/null
 brew cask install keepassx 2> /dev/null
 brew cask install liteicon 2> /dev/null
@@ -92,6 +94,7 @@ brew install git-flow
 brew install grc ## Generic Log Colorizer
 brew install httpie
 brew install nmap
+brew install netcat
 brew install pigz
 brew install rename
 brew install tree
@@ -101,8 +104,6 @@ brew install zopfli
 brew install pv 
 
 # Install Development languages and tools
-brew install docker 2> /dev/null
-brew install docker-machine 2> /dev/null
 brew install go
 brew install nvm
 brew install python --framework
