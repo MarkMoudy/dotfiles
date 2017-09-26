@@ -44,6 +44,7 @@ brew cask install keepassx 2> /dev/null
 brew cask install liteicon 2> /dev/null
 brew cask install little-snitch 2> /dev/null
 brew cask install micro-snitch 2> /dev/null
+brew cask install shuttle 2> /dev/null
 brew cask install sizeup 2> /dev/null
 brew cask install spectacle 2> /dev/null
 brew cask install the-unarchiver 2> /dev/null
