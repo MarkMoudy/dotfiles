@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # fetch boilerplate .gitignore from project types input 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
@@ -10,6 +12,10 @@ cover () {
 covercount () { 
     t="/tmp/go-cover.$$.tmp"
     go test -covermode=count -coverprofile=$t $@ && go tool cover -html=$t && unlink $t
+}
+
+function st() {
+	go test -json | slowtest
 }
 
 # Create a new directory and enter it

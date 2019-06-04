@@ -15,10 +15,8 @@ unset file;
 
 #setup nodejs NVM tool 
 # source $(brew --prefix nvm)/nvm.sh
-export NVM_DIR="/Users/mmoudy001c/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export HOMEBREW_NO_ANALYTICS=1
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Ignore lines matching the previous history entry. Prevents up arrow through
 # a bunch of ls commands, etc.
@@ -45,12 +43,25 @@ for option in autocd globstar; do
 done;
 
 # Add tab completion for many Bash commands
-if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
-	. $(brew --prefix)/share/bash-completion/bash_completion
-fi
+# if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+# 	. $(brew --prefix)/share/bash-completion/bash_completion
+# fi
+
+# Add tab completion for many Bash commands
+if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
+	# Ensure existing Homebrew v1 completions continue to work
+	export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/etc/bash_completion.d";
+	source "$(brew --prefix)/etc/profile.d/bash_completion.sh";
+elif [ -f /etc/bash_completion ]; then
+	source /etc/bash_completion;
+fi;
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
+
+# add tab completion for vault. install with `vault -autocomplete-install` then remove the line from bashrc.
+[ -e "/usr/local/bin/vault" ] && complete -C /usr/local/bin/vault vault
+
 
 # source grc for colorizations
 if [ -f $(brew --prefix grc)/etc/grc.bashrc ]; then
@@ -66,7 +77,8 @@ function start_agent {
      echo succeeded
      chmod 600 "${SSH_ENV}"
      . "${SSH_ENV}" > /dev/null
-     /usr/bin/ssh-add;
+     /usr/bin/ssh-add
+     /usr/bin/ssh-add -A &> /dev/null;
 }
 
 # Source SSH settings, if applicable
