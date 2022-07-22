@@ -1,3 +1,10 @@
+#!/usr/bin/env bash
+
+# ignore Apple default shell is now zsh warning
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 
 # Default Prompt settings
 # \h - hostname up to the first '.'
@@ -56,21 +63,42 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
 
 # add tab completion for vault. install with `vault -autocomplete-install` then remove the line from bashrc.
-[ -e "/usr/local/bin/vault" ] && complete -C /usr/local/bin/vault vault
+# [ -e "/usr/local/bin/vault" ] && complete -C /usr/local/bin/vault vault
+
+# Add tab auto-completion for terraform
+# [ -s /usr/local/opt/terraform@0.13/bin/terraform ] && complete -C /usr/local/opt/terraform@0.13/bin/terraform terraform
 
 
 # source grc for colorizations
-if [ -f $(brew --prefix grc)/etc/grc.bashrc ]; then
-    source $(brew --prefix grc)/etc/grc.bashrc
+if [ -f "$(brew --prefix grc)"/etc/grc.bashrc ]; then
+    source "$(brew --prefix grc)"/etc/grc.bashrc
 fi
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# set up virtual environments for python and Go(to be removed later on)
+# if command -v pyenv 1>/dev/null 2>&1; then
+# 	# eval "$(pyenv init --path)"
+# 	eval "$(pyenv init -)"
+# 	eval "$(pyenv virtualenv-init -)"
+# fi
+
+# [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
+
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#  eval "$(jenv init -)"
+
+#  Gcloud
+
+# if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]; then
+# 	source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+# 	source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+# fi
 
 # trap cleanup EXIT
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
