@@ -25,7 +25,7 @@ brew install gnu-sed
 
 # Install Bash 4.
 brew install bash
-brew install bash-completion2
+brew install bash-completion@2
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
   echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
@@ -59,7 +59,7 @@ brew install tree
 brew install zopfli
 
 # Install Development languages and tools
-# brew install go
+brew install go
 # brew install nvm
 # nvm install v0.12.0
 # npm install -g bower

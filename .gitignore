@@ -17,3 +17,4 @@ Thumbs.db
 .extra*
 .path
 .path-proxy
+.local/
