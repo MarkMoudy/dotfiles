@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Cask apps
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications --fontdir=/Library/Fonts"
 
 # Sanity tools
 brew install --cask alfred
@@ -22,5 +22,12 @@ brew install --cask imageoptim 2> /dev/null
 brew install --cask numi 2> /dev/null
 brew install --cask visual-studio-code 2> /dev/null
 brew install --cask vlc 2> /dev/null
+
+# Fonts
+brew tap homebrew/cask-fonts
+# svn is needed for source-code-pro font installation
+brew install svn
+brew install font-source-code-pro font-roboto font-roboto-mono
+brew uninstall svn
 
 brew cleanup

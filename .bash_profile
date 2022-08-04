@@ -4,7 +4,7 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_CASK_OPTS='--appdir=/Applications'
+export HOMEBREW_CASK_OPTS='--appdir=/Applications --fontdir=/Library/Fonts'
 
 # Default Prompt settings
 # \h - hostname up to the first '.'
